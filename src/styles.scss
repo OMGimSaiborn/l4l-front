@@ -1,0 +1,43 @@
+@import 'primeicons/primeicons.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force light mode regardless of system preference */
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* Override PrimeNG surface backgrounds */
+.p-card,
+.p-dialog,
+.p-panel,
+.p-inputtext,
+.p-password-input,
+.p-inputnumber-input {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.p-inputtext::placeholder,
+.p-password-input::placeholder,
+.p-inputnumber-input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Force light navbar */
+.p-menubar {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.p-menubar .p-menuitem > .p-menuitem-link {
+  color: #1f2937 !important;
+}
+
